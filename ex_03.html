@@ -41,7 +41,17 @@
     <!-- Write your code inside the next script tag -->
 
     <script>
-
+      let userName = "";
+      const openPromt = function () {
+        userName = prompt("What is your name ?");
+        confirm("Are you sure " + userName + " is your name?");
+        whiteBox.innerHTML = userName;
+        alert("Hello " + userName);
+      };
+      const whiteBox = document
+        .getElementsByTagName("footer")[0]
+        .getElementsByTagName("div")[0];
+      whiteBox.addEventListener("click", openPromt);
     </script>
 </body>
 </html>
