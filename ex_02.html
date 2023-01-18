@@ -33,7 +33,14 @@
     <!-- Write your code inside the next script tag -->
 
     <script>
-
+      let amountClicks = 0;
+      const box = document.getElementsByTagName("section")[0];
+      const textField = box.getElementsByTagName("p")[0];
+      
+      box.addEventListener("click", () => {
+        amountClicks++;
+        textField.innerHTML = amountClicks;
+      });
     </script>
 </body>
 </html>
