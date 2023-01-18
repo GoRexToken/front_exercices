@@ -34,7 +34,19 @@
     <!-- Write your code inside the next script tag -->
 
     <script>
-
+      let keyboardString = "";
+      const whiteBox = document
+        .getElementsByTagName("footer")[0]
+        .getElementsByTagName("div")[0];
+      document.addEventListener("keydown", function (event) {
+        if (keyboardString.length < 42) {
+          keyboardString += event.key;
+        } else {
+          keyboardString = keyboardString.substring(1);
+          keyboardString += event.key;
+        }
+        whiteBox.innerHTML = keyboardString;
+      });
     </script>
 </body>
 </html>
